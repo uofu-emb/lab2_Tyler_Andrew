@@ -1,4 +1,18 @@
+# here is the command to load the files.
+
+make sure your command line as the filepath for the bash file
+
+then do the following
+
+Go to directory 
+
+cmake -B build -S .  
+cmake --build build 
+picotool load -f build/src/hello_freertos.elf && picotool reboot 
+
+
 # Renode setup
+
 The Raspberry Pico needs configuration files for Renode to work properly.
 
 * On MacOS, the installation location is `/Applications/Renode.app/Contents/MacOs`
