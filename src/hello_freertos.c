@@ -30,6 +30,7 @@ void main_task(__unused void *params) {
     xTaskCreate(blink_task, "BlinkThread",
                 BLINK_TASK_STACK_SIZE, NULL, BLINK_TASK_PRIORITY, NULL);
     char c;
+    //checks getchar 
     while(c = getchar()) {
         if (c <= 'z' && c >= 'a') putchar(c - 32);
         else if (c >= 'A' && c <= 'Z') putchar(c + 32);
