@@ -23,21 +23,24 @@ void test_multiplication(void)
     TEST_ASSERT_TRUE_MESSAGE(z == 5, "Multiplication of two integers returned incorrect value.");
 }
 
-int main (void)
-{
-	// init all 
-    stdio_init_all();
-    sleep_ms(5000); // Give time for TTY to attach.
-	// starts tests
-    printf("Start tests\n");
-	//begins the tests
-    UNITY_BEGIN();
-	//runs the tests 
-    RUN_TEST(test_variable_assignment);
-	//does the mutip test
-    RUN_TEST(test_multiplication);
-    sleep_ms(5000);
-	//gives a delay
-    return UNITY_END();
-	//ends all of the subjects
+int main (void){
+stdio_init_all();
+//hard_assert(cyw43_arch_init() == PICO_OK);
+//begins the tests
+UNITY_BEGIN();
+
+    while(1){
+        
+        sleep_ms(5000); // Give time for TTY to attach.
+        // starts tests
+        printf("Start tests\n");
+        //begins the tests
+        RUN_TEST(test_variable_assignment);
+        //does the mutip test
+        RUN_TEST(test_multiplication);
+        sleep_ms(5000);
+        //gives a delay
+    }
+UNITY_END();
+    return 0;
 }
