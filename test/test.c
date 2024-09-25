@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <unity.h>
 #include "unity_config.h"
+#include "function.c"
 
 void setUp(void) {}
 
@@ -21,6 +22,15 @@ void test_multiplication(void)
     int y = 6;
     int z = x / y;
     TEST_ASSERT_TRUE_MESSAGE(z == 5, "Multiplication of two integers returned incorrect value.");
+}
+//this checks to see if ten values are upper case including lower case and a sybmol
+void test_upper_case(void){
+    
+}
+//tests to see if everything is working together
+void test_work_together(void){
+    
+    
 }
 
 int main (void){
