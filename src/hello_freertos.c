@@ -44,9 +44,7 @@ void main_task(__unused void *params) {
     //assigns c value to what getchar value is
     while(c = getchar()) {
         //sees if the value is less then z or a and puts it so that there is
-        if (c <= 'z' && c >= 'a') putchar(c - 32);
-        else if (c >= 'A' && c <= 'Z') putchar(c + 32);
-        else putchar(c);
+        upper_case(c);
     }
 }
 
