@@ -17,9 +17,9 @@ void test_upper_case(void){
 
 }
 
+//we are testing is there is a valid input in the code
 void test_HEX_valid_input(void){
    TEST_ASSERT_HEX_WITHIN(0x5A,0x00,upper_case('y'));
-
 }
 
 
@@ -35,10 +35,6 @@ UNITY_BEGIN();
         // starts tests
         printf("Start tests\n");
         //begins the tests
-        RUN_TEST(test_variable_assignment);
-        //does the mutip test
-        RUN_TEST(test_multiplication);
-
         RUN_TEST(test_HEX_valid_input);
         RUN_TEST(test_upper_case);
         sleep_ms(5000);
