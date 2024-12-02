@@ -17,7 +17,7 @@ void test_upper_case(void){
 
 }
 
-//we are testing is there is a valid input in the code
+//Here are testing if the input is within a valid range
 void test_HEX_valid_input(void){
    TEST_ASSERT_HEX_WITHIN(0x5A,0x00,upper_case('y'));
 }
